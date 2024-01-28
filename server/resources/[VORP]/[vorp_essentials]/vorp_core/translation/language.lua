@@ -1,6 +1,7 @@
 Translation = {
     English      = {
         Notify          = {
+            testText = "This is a test notification",
             userNonExistent = "ID is wrong or user doesnt exist.",
             ReadSuggestion = "Please read the chat suggestions on how to use the command.",
             SetGroup = "You gave Group to ID: %d",
@@ -57,9 +58,11 @@ Translation = {
                 help = 'player ID',
                 help1 = 'Job Name',
                 help2 = 'Job Name',
+                help3 = 'Job Label',
                 name = "Id",
                 name1 = "Jobname",
                 name2 = "JobGrade",
+                name3 = "JobLabel"
             },
             addItem = {
                 custom = "\n**PlayerID:** `%d` \n**Item given** `%s`\n**Count:** `%d`",
@@ -79,14 +82,8 @@ Translation = {
                 label = "VORPcore command to give weapons",
                 help = 'player ID',
                 help1 = 'Weapon Hash name',
-                help2 = 'weapon serial number (optional)',
-                help3 = 'Weapon custom name (optional)',
-                help4 = 'Weapon custom description (optional)',
                 name = "Id",
                 name1 = "HashName",
-                name2 = "serialNumber",
-                name3 = "customLabel",
-                name4 = "customDescription",
             },
             delMoney = {
                 custom = "\n**PlayerID** `%d` \n**Type** `%d`\n**Quantity** `%d`",
@@ -189,7 +186,7 @@ Translation = {
                 help = "steam id example 11000010c8aa16e",
             },
             charName = {
-                custom = "\n**PlayerID** `%d`\n **Action:** `used charname`",
+                custom = "\n**PlayerID** `%d`\n **Action:** `used charname` \n **name: ** `%s %s` ",
                 title = "📋` /charname command` ",
                 label = "VORPcore command to change a player name ",
                 name = "Id",
@@ -202,19 +199,13 @@ Translation = {
             charCreateAdd = {
                 custom = "\n**PlayerID** `%d`\n **Action:** `used charcreateadd`",
                 title = "📋` /addchar command` ",
-                label = "VORPcore command to set player can create more than one character will be allowed to create: " ..
+                label = "VORPcore command to set player can create more than one character default is: " ..
                     Config.MaxCharacters,
-                name = "steamid",
-                help = "steam id example 11000010c8aa16e",
+                name = "playerId",
+                name1 = "amount",
+                help = "server id player must be in game",
+                help1 = "amount of characters to update this is not incremental",
 
-            },
-            charCreateRemove = {
-                custom = "\n**PlayerID** `%d`\n **Action:** `used charcreateremove`",
-                title = "📋` /removechar command` ",
-                label = "VORPcore command to set player can create more than one character will be allowed to create: " ..
-                    Config.MaxCharacters,
-                name = "steamid",
-                help = "steam id example 11000010c8aa16e",
             },
             myJob = {
                 title = "📋` /myjob command` ",
@@ -230,9 +221,14 @@ Translation = {
             whitelistid1 = "📋` New player joined server` ",
         },
         MessageOfSystem = {
-            IsConnected        = "🚫 Duplicated account connected (Steam | Rockstar | EpicGames)",
-            NoSteam            = "🚫 You have to have Steam open, please open Steam & restart RedM",
-            NoInWhitelist      = "🚫 You are not in the Whitelist. Send in discord channel #user-id your user-id: ",
+            IsConnected        = "❌ Access Denied: Duplicate Account Detected (Steam | Rockstar)",
+            TwoAccounts        = "❌ Access Denied: Attempted Login with Another Account.",
+            TwoAccounts2       = "❌ Access Denied: Steam ID Already Registered on Server.",
+            AccountEarlyLoad   = "❌ Access Denied: Account Loading in Progress.",
+            AccountEarlyLoad2  = "❌ Access Denied: Double Loading of Account Not Allowed.",
+            NoSteam            = "❌ Steam Required: Please Open Steam and Restart RedM.",
+            NoDiscord          = "❌ Discord Required: Please Open Discord and Restart RedM.",
+            NoInWhitelist      = "❌ Access Denied: User Not on Whitelist. Please Send Your User-ID in Discord: ",
             NoPermissions      = "You don't have enough permissions",
             CheckingIdentifier = "Checking Identifiers",
             LoadingUser        = "Loading User",
@@ -246,10 +242,10 @@ Translation = {
             YouAreCarried      = "You are being carried by a person",
             promptLabel        = "Respawn",
             prompt             = "Respawn",
-            wayPoint           = "VORP: You need to set a waypoint first!",
-            mustBeSeated       = "VORP: You must be in the driver's seat!",
-            wagonInFront       = "VORP: You must be seated or near a wagon to delete it!",
-            cantCarry          = "VORP: Can't carry more weapons!",
+            wayPoint           = "~e~You need to set a waypoint first!",
+            mustBeSeated       = "~e~You must be in the driver's seat!",
+            wagonInFront       = "~e~You must be seated or near a wagon to delete it!",
+            cantCarry          = "~e~Can't carry more weapons!",
             Hold               = "HOLD ON!!",
             Load               = "You are waking up",
             Almost             = "Almost there...",
@@ -275,7 +271,7 @@ Translation = {
             message5           = "you were injured , per rule you must forget the past 30 minutes",
             message6           = "Respawn!!!",
             permanentlyBan     = "You are banned permanently!",
-
+            PlayerWhenFocus    = "Player",
         },
         SuggestChat     = {
             hideUi = "VORPcore command to HIDE all UI's from screen, nice to take screenshots.",
@@ -286,6 +282,7 @@ Translation = {
     },
     Portugues_PT = {
         Notify = {
+            testText = "Esta é uma notificação de teste",
             userNonExistent = "ID está errado ou o utilizador não existe.",
             ReadSuggestion = "Por favor, leia as sugestões no chat sobre como usar o comando.",
             SetGroup = "Atribuiu o grupo ao ID: %d",
@@ -363,14 +360,8 @@ Translation = {
                 label = "Comando VORPcore para dar armas ao jogador",
                 help = 'ID do jogador',
                 help1 = "Hash da arma",
-                help2 = 'Número de série da arma (opcional)',
-                help3 = 'Nome personalizado da arma (opcional)',
-                help4 = 'Descrição personalizada da arma (opcional)',
                 name = "Id",
                 name1 = "HashArma",
-                name2 = "NúmeroSérie",
-                name3 = "Nome",
-                name4 = "Descrição",
             },
             delMoney = {
                 custom = "\n**ID do Jogador** `%d` \n**Tipo** `%d`\n**Quantidade** `%d`",
@@ -489,16 +480,10 @@ Translation = {
                 label =
                     "Comando VORPcore para permitir que um jogador crie mais de um personagem (será permitido criar: " ..
                     Config.MaxCharacters .. ")",
-                name = "steamid",
-                help = "exemplo de ID Steam: 11000010c8aa16e",
-            },
-            charCreateRemove = {
-                custom = "\n**ID do Jogador** `%d`\n **Ação:** `usou charcreateremove`",
-                title = "📋`Comando /removechar`",
-                label = "Comando VORPcore para definir se o jogador pode criar mais de um personagem: " ..
-                    Config.MaxCharacters .. " personagens serão permitidos",
-                name = "steamid",
-                help = "exemplo de ID Steam: 11000010c8aa16e",
+                name = "ID",
+                name1 = "quantidade",
+                help = "ID do jogador",
+                help1 = "quantidade de personagens para atualizar, não é incremental",
             },
             myJob = {
                 title = "📋`Comando /myjob`",
@@ -514,9 +499,15 @@ Translation = {
             whitelistid1 = "📋` Novo jogador entrou no servidor` ",
         },
         MessageOfSystem = {
-            IsConnected        = "🚫 Conta duplicada conectada (Steam | Rockstar | EpicGames)",
-            NoSteam            = "🚫 Você precisa ter o Steam aberto, por favor abra o Steam e reinicie o RedM",
-            NoInWhitelist      = "🚫 Você não está na Lista Branca. Envie no canal #user-id do Discord o seu ID de usuário: ",
+            IsConnected        = "❌ Acesso Negado: Conta Duplicada Detectada (Steam | Rockstar)",
+            TwoAccounts        = "❌ Acesso Negado: Tentativa de Login com Outra Conta.",
+            TwoAccounts2       = "❌ Acesso Negado: ID do Steam Já Registrado no Servidor.",
+            AccountEarlyLoad   = "❌ Acesso Negado: Carregamento da Conta em Progresso.",
+            AccountEarlyLoad2  = "❌ Acesso Negado: Não é Permitido o Carregamento Duplo da Conta.",
+            NoSteam            = "❌ Steam Necessário: Por favor, Abra o Steam e Reinicie o RedM.",
+            NoDiscord          = "❌ Discord Necessário: Por favor, Abra o Discord e Reinicie o RedM.",
+            NoInWhitelist      =
+            "❌ Acesso Negado: Usuário Não está na Lista Branca. Por favor, Envie seu ID de Usuário no Discord: ",
             NoPermissions      = "Você não tem permissões suficientes",
             CheckingIdentifier = "Verificando Identificadores",
             LoadingUser        = "Carregando Usuário",
@@ -530,10 +521,10 @@ Translation = {
             YouAreCarried      = "Você está sendo carregado por alguém",
             promptLabel        = "Renascer",
             prompt             = "Renascer",
-            wayPoint           = "VORP: Você precisa definir um ponto de referência primeiro!",
-            mustBeSeated       = "VORP: Você deve estar no banco do motorista!",
-            wagonInFront       = "VORP: Você deve estar sentado ou perto de uma carroça para excluí-la!",
-            cantCarry          = "VORP: Não é possível carregar mais armas!",
+            wayPoint           = "~e~Você precisa definir um ponto de referência primeiro!",
+            mustBeSeated       = "~e~Você deve estar no banco do motorista!",
+            wagonInFront       = "~e~Você deve estar sentado ou perto de uma carroça para excluí-la!",
+            cantCarry          = "~e~Não é possível carregar mais armas!",
             Hold               = "AGUARDE!!",
             Load               = "Você está acordando",
             Almost             = "Quase lá...",
@@ -558,7 +549,8 @@ Translation = {
             message4           = "ID do jogador ",
             message5           = "você foi ferido, de acordo com a regra você deve esquecer os últimos 30 minutos",
             message6           = "Renascer!!!",
-            permanentlyBan     = "Você está banido permanentemente!"
+            permanentlyBan     = "Você está banido permanentemente!",
+            PlayerWhenFocus    = "Jogador",
         },
         SuggestChat = {
             hideUi = "Comando VORPcore para ESCONDER todas as UIs da tela, útil para tirar capturas de tela.",
@@ -569,6 +561,7 @@ Translation = {
     },
     Portugues_BR = {
         Notify          = {
+            testText = "Esta é uma notificação de teste",
             userNonExistent = "ID está errado ou o usuário não existe.",
             ReadSuggestion = "Por favor, leia as sugestões no chat sobre como usar o comando.",
             SetGroup = "Você atribuiu o grupo ao ID: %d",
@@ -646,14 +639,8 @@ Translation = {
                 label = "Comando VORPcore para dar armas",
                 help = 'ID do jogador',
                 help1 = 'Hash da Arma',
-                help2 = 'Número de série da arma (opcional)',
-                help3 = 'Nome personalizado da arma (opcional)',
-                help4 = 'Descrição personalizada da arma (opcional)',
                 name = "Id",
                 name1 = "HashArma",
-                name2 = "NúmeroSérie",
-                name3 = "Nome",
-                name4 = "Descrição",
             },
             delMoney = {
                 custom = "\n**ID do Jogador** `%d` \n**Tipo** `%d`\n**Quantidade** `%d`",
@@ -771,17 +758,12 @@ Translation = {
                 title = "📋` Comando /addchar` ",
                 label = "Comando VORPcore para permitir que o jogador crie mais de um personagem (quantidade permitida: " ..
                     Config.MaxCharacters .. ")",
-                name = "steamid",
-                help = "exemplo de ID da Steam: 11000010c8aa16e",
+                name = "ID",
+                name1 = "quantidade",
+                help = "ID do jogador",
+                help1 = "quantidade de personagens para atualizar, não é incremental",
             },
-            charCreateRemove = {
-                custom = "\n**ID do Jogador** `%d`\n **Ação:** `usou o comando charcreateremove`",
-                title = "📋` Comando /removechar`",
-                label = "Comando VORPcore para permitir que o jogador crie mais de um personagem. Será permitido criar: " ..
-                    Config.MaxCharacters,
-                name = "steamid",
-                help = "exemplo de ID Steam: 11000010c8aa16e",
-            },
+
             myJob = {
                 title = "📋` Comando /myjob`",
                 label = "Comando VORPcore para verificar o seu emprego",
@@ -796,9 +778,15 @@ Translation = {
             whitelistid1 = "📋` Novo jogador entrou no servidor` ",
         },
         MessageOfSystem = {
-            IsConnected        = "🚫 Conta duplicada conectada (Steam | Rockstar)",
-            NoSteam            = "🚫 Você precisa ter o Steam aberto, por favor abra o Steam e reinicie o RedM",
-            NoInWhitelist      = "🚫 Você não está na lista de permissões. Envie no canal do Discord #user-id o seu user-id: ",
+            IsConnected        = "❌ Acesso Negado: Conta Duplicada Detectada (Steam | Rockstar)",
+            TwoAccounts        = "❌ Acesso Negado: Tentativa de Login com Outra Conta.",
+            TwoAccounts2       = "❌ Acesso Negado: ID do Steam Já Registrado no Servidor.",
+            AccountEarlyLoad   = "❌ Acesso Negado: Carregamento da Conta em Andamento.",
+            AccountEarlyLoad2  = "❌ Acesso Negado: Não é Permitido Carregamento Duplo da Conta.",
+            NoSteam            = "❌ Steam Necessário: Por favor, Abra o Steam e Reinicie o RedM.",
+            NoDiscord          = "❌ Discord Necessário: Por favor, Abra o Discord e Reinicie o RedM.",
+            NoInWhitelist      =
+            "❌ Acesso Negado: Usuário Não Está na Lista Branca. Por favor, Envie seu ID de Usuário no Discord: ",
             NoPermissions      = "Você não tem permissões suficientes",
             CheckingIdentifier = "Verificando Identificadores",
             LoadingUser        = "Carregando Usuário",
@@ -812,10 +800,10 @@ Translation = {
             YouAreCarried      = "Você está sendo carregado por alguém",
             promptLabel        = "Renascer",
             prompt             = "Renascer",
-            wayPoint           = "VORP: Você precisa definir um ponto de referência primeiro!",
-            mustBeSeated       = "VORP: Você deve estar no banco do motorista!",
-            wagonInFront       = "VORP: Você deve estar sentado ou perto de uma carroça para deletá-la!",
-            cantCarry          = "VORP: Não é possível carregar mais armas!",
+            wayPoint           = "~e~Você precisa definir um ponto de referência primeiro!",
+            mustBeSeated       = "~e~Você deve estar no banco do motorista!",
+            wagonInFront       = "~e~Você deve estar sentado ou perto de uma carroça para deletá-la!",
+            cantCarry          = "~e~Não é possível carregar mais armas!",
             Hold               = "ESPERE!!",
             Load               = "Você está acordando",
             Almost             = "Quase lá...",
@@ -840,7 +828,8 @@ Translation = {
             message4           = "ID do Jogador ",
             message5           = "você foi ferido, de acordo com a regra você deve esquecer os últimos 30 minutos",
             message6           = "Renascer!!!",
-            permanentlyBan     = "Você está banido permanentemente!"
+            permanentlyBan     = "Você está banido permanentemente!",
+            PlayerWhenFocus    = "Jogador",
         },
         SuggestChat     = {
             hideUi = "Comando VORPcore para ESCONDER todas as interfaces da tela, útil para fazer capturas de tela.",
@@ -851,6 +840,7 @@ Translation = {
     },
     Italian      = {
         Notify          = {
+            testText = "Questo è un messaggio di prova",
             userNonExistent = "L'ID è errato o l'utente non esiste.",
             ReadSuggestion = "Si prega di leggere i suggerimenti della chat su come utilizzare il comando.",
             SetGroup = "Hai assegnato il gruppo a ID: %d",
@@ -928,15 +918,8 @@ Translation = {
                 label = "Comando VORPcore per consegnare armi ",
                 help = 'ID Player',
                 help1 = 'Hash Arma',
-                help2 = 'Numero di serie dell\'arma (opzionale)',
-                help3 = 'Nome personalizzato dell\'arma (opzionale)',
-                help4 = 'Descrizione personalizzata dell\'arma (opzionale)',
                 name = "Id",
                 name1 = "HashArma",
-                name2 = "NumeroSerie",
-                name3 = "Nome",
-                name4 = "Descrizione",
-
             },
             delMoney = {
                 custom = "\n**IDPlayer** `%d` \n**Tipo** `%d`\n**Quantità** `%d`",
@@ -1053,17 +1036,12 @@ Translation = {
                 custom = "\n**IDPlayer** `%d`\n **Azione:** `ha usato charcreateadd`",
                 title = "📋` /addchar` ",
                 label = "Comando VORPcore per aggiungere un personaggio ad un giocatore ",
-                name = "steamid",
-                help = "steam id esempio 11000010c8aa16e",
+                name = "ID",
+                name1 = "quantità",
+                help = "ID Player",
+                help1 = "quantità di personaggi da aggiungere, non è incrementale",
+            },
 
-            },
-            charCreateRemove = {
-                custom = "\n**IDPlayer** `%d`\n **Azione:** `ha usato charcreateremove`",
-                title = "📋` /removechar` ",
-                label = "Comando VORPcore per rimuovere un personaggio ad un giocatore ",
-                name = "steamid",
-                help = "steam id esempio 11000010c8aa16e",
-            },
             myJob = {
                 title = "📋` /myjob` ",
                 label = "Comando VORPcore per vedere il proprio lavoro",
@@ -1078,9 +1056,15 @@ Translation = {
             whitelistid1 = "📋` Nuovo giocatore entrato nel server` ",
         },
         MessageOfSystem = {
-            IsConnected        = "🚫 Account duplicato collegato (Steam | Rockstar | EpicGames)",
-            NoSteam            = "🚫 Devi avere Steam aperto, per favore apri Steam e riavvia RedM",
-            NoInWhitelist      = "🚫 Non sei nella Whitelist. Invia nel canale discord #user-id il tuo user-id: ",
+            IsConnected        = "❌ Accesso Negato: Account Duplicato Rilevato (Steam | Rockstar)",
+            TwoAccounts        = "❌ Accesso Negato: Tentativo di Accesso con un Altro Account.",
+            TwoAccounts2       = "❌ Accesso Negato: ID Steam Già Registrato sul Server.",
+            AccountEarlyLoad   = "❌ Accesso Negato: Caricamento Account in Corso.",
+            AccountEarlyLoad2  = "❌ Accesso Negato: Non è Permesso il Doppio Caricamento dell'Account.",
+            NoSteam            = "❌ Steam Richiesto: Si Prega di Aprire Steam e Riavviare RedM.",
+            NoDiscord          = "❌ Discord Richiesto: Si Prega di Aprire Discord e Riavviare RedM.",
+            NoInWhitelist      =
+            "❌ Accesso Negato: Utente Non in Whitelist. Si Prega di Inviare il Tuo ID Utente in Discord: ",
             NoPermissions      = "Non hai abbastanza permessi",
             CheckingIdentifier = "Controllo degli identificatori in corso",
             LoadingUser        = "Caricamento utente",
@@ -1094,10 +1078,10 @@ Translation = {
             YouAreCarried      = "Sei trasportato da una persona",
             promptLabel        = "Respawn",
             prompt             = "Respawn",
-            wayPoint           = "VORP: Devi impostare prima un punto di destinazione!",
-            mustBeSeated       = "VORP: Devi essere seduto sul sedile del conducente!",
-            wagonInFront       = "VORP: Devi essere seduto o vicino a un carro per eliminarlo!",
-            cantCarry          = "VORP: Non puoi portare più armi!",
+            wayPoint           = "~e~Devi impostare prima un punto di destinazione!",
+            mustBeSeated       = "~e~Devi essere seduto sul sedile del conducente!",
+            wagonInFront       = "~e~Devi essere seduto o vicino a un carro per eliminarlo!",
+            cantCarry          = "~e~Non puoi portare più armi!",
             Hold               = "ATTENDI!!",
             Load               = "Ti stai svegliando",
             Almost             = "Quasi arrivato...",
@@ -1123,6 +1107,7 @@ Translation = {
             message5           = "sei stato ferito, secondo le regole devi dimenticare gli ultimi 30 minuti",
             message6           = "Respawn!!!",
             permanentlyBan     = "Sei bannato definitivamente!",
+            PlayerWhenFocus    = "Giocatore",
         },
         SuggestChat     = {
             hideUi = "Comando VORPcore per NASCONDERE tutte le UI dallo schermo, utile per fare screenshot.",
@@ -1133,6 +1118,7 @@ Translation = {
     },
     Spanish      = {
         Notify          = {
+            testText = "Este es un mensaje de prueba",
             userNonExistent = "ID incorrecta o Usuario no existente.",
             ReadSuggestion = "Por favor lea las sugerencias del chat para utilizar el comando correctamente.",
             SetGroup = "Has añadido al Grupo al Usuario con ID: %d",
@@ -1210,14 +1196,8 @@ Translation = {
                 label = "VORPcore: comando para añadir armas a un usuario",
                 help = 'ID Usuario',
                 help1 = 'Hash del Arma',
-                help2 = 'Numero de serie del arma (opcional)',
-                help3 = 'Nombre personalizado del arma (opcional)',
-                help4 = 'Descripción personalizada del arma (opcional)',
                 name = "Id",
                 name1 = "HashArma",
-                name2 = "NumeroSerie",
-                name3 = "Nombre",
-                name4 = "Descripción",
             },
             delMoney = {
                 custom = "\n**IDUsuario** `%d` \n**Tipo de Dinero** `%d`\n**Cantidad** `%d`",
@@ -1335,17 +1315,12 @@ Translation = {
                 title = "📋` Comando /addchar` ",
                 label = "Comando VORPcore para permitir que un jugador cree más de un personaje. Se permitirá crear: " ..
                     Config.MaxCharacters,
-                name = "steamid",
-                help = "ejemplo de ID de Steam: 11000010c8aa16e",
+                name = "ID",
+                name1 = "cantidad",
+                help = "ID del jugador",
+                help1 = "cantidad de personajes a añadir, no es incremental",
             },
-            charCreateRemove = {
-                custom = "\n**PlayerID** `%d`\n **Acción:** `usó charcreateremove`",
-                title = "📋` Comando /removechar` ",
-                label = "Comando VORPcore para permitir que los jugadores creen más de un personaje: " ..
-                    Config.MaxCharacters,
-                name = "steamid",
-                help = "ejemplo de ID de Steam: 11000010c8aa16e",
-            },
+
             myJob = {
                 title = "📋` Comando /myjob` ",
                 label = "Comando VORPcore para verificar tu trabajo",
@@ -1360,9 +1335,15 @@ Translation = {
             whitelistid1 = "📋` Nuevo jugador se unió al servidor` ",
         },
         MessageOfSystem = {
-            IsConnected        = "🚫 Cuenta duplicada conectada (Steam | Rockstar | EpicGames)",
-            NoSteam            = "🚫 Debes tener Steam abierto, por favor abre Steam y reinicia RedM",
-            NoInWhitelist      = "🚫 No estás en la lista blanca. Envía en el canal de Discord #user-id tu user-id: ",
+            IsConnected        = "❌ Acceso Denegado: Cuenta Duplicada Detectada (Steam | Rockstar)",
+            TwoAccounts        = "❌ Acceso Denegado: Intento de Inicio de Sesión con Otra Cuenta.",
+            TwoAccounts2       = "❌ Acceso Denegado: ID de Steam Ya Registrado en el Servidor.",
+            AccountEarlyLoad   = "❌ Acceso Denegado: Carga de Cuenta en Progreso.",
+            AccountEarlyLoad2  = "❌ Acceso Denegado: No Se Permite la Carga Doble de la Cuenta.",
+            NoSteam            = "❌ Steam Necesario: Por Favor, Abre Steam y Reinicia RedM.",
+            NoDiscord          = "❌ Discord Necesario: Por Favor, Abre Discord y Reinicia RedM.",
+            NoInWhitelist      =
+            "❌ Acceso Denegado: Usuario No en la Lista Blanca. Por Favor, Envía Tu ID de Usuario en Discord: ",
             NoPermissions      = "No tienes suficientes permisos",
             CheckingIdentifier = "Verificando identificadores",
             LoadingUser        = "Cargando usuario",
@@ -1376,10 +1357,10 @@ Translation = {
             YouAreCarried      = "Estás siendo cargado por una persona",
             promptLabel        = "Reaparecer",
             prompt             = "Reaparecer",
-            wayPoint           = "VORP: ¡Primero debes establecer un punto de referencia!",
-            mustBeSeated       = "VORP: ¡Debes estar en el asiento del conductor!",
-            wagonInFront       = "VORP: ¡Debes estar sentado o cerca de una carreta para eliminarla!",
-            cantCarry          = "VORP: ¡No puedes llevar más armas!",
+            wayPoint           = "~e~¡Primero debes establecer un punto de referencia!",
+            mustBeSeated       = "~e~¡Debes estar en el asiento del conductor!",
+            wagonInFront       = "~e~¡Debes estar sentado o cerca de una carreta para eliminarla!",
+            cantCarry          = "~e~¡No puedes llevar más armas!",
             Hold               = "¡ESPERA!",
             Load               = "Estás despertando",
             Almost             = "Casi allí...",
@@ -1404,7 +1385,8 @@ Translation = {
             message4           = "ID del jugador ",
             message5           = "has sido herido, según la regla debes olvidar los últimos 30 minutos",
             message6           = "¡Reaparecer!",
-            permanentlyBan     = "Estás baneado permanentemente!"
+            permanentlyBan     = "Estás baneado permanentemente!",
+            PlayerWhenFocus    = "Jugador",
         },
         SuggestChat     = {
             hideUi =
@@ -1416,6 +1398,7 @@ Translation = {
     },
     Francais     = {
         Notify          = {
+            testText = "Ceci est un message de test",
             userNonExistent = "L'ID est incorrect ou l'utilisateur n'existe pas.",
             ReadSuggestion = "Veuillez lire les suggestions de discussion sur la façon d'utiliser la commande.",
             SetGroup = "Vous avez attribué le groupe à l'ID : %d",
@@ -1495,14 +1478,8 @@ Translation = {
                 label = "Commande VORPcore pour donner des armes",
                 help = 'ID du joueur',
                 help1 = 'Hash de l\'arme',
-                help2 = 'Numéro de série de l\'arme (facultatif)',
-                help3 = 'Nom personnalisé de l\'arme (facultatif)',
-                help4 = 'Description personnalisée de l\'arme (facultatif)',
                 name = "Id",
                 name1 = "HashArme",
-                name2 = "NuméroSérie",
-                name3 = "Nom",
-                name4 = "Description",
             },
             delMoney = {
                 custom = "\n**ID Joueur** `%d` \n**Type** `%d`\n**Quantité** `%d`",
@@ -1620,17 +1597,12 @@ Translation = {
                 title = "📋` Commande /addchar`",
                 label = "Commande VORPcore pour autoriser un joueur à créer plusieurs personnages (maximum : " ..
                     Config.MaxCharacters .. ")",
-                name = "steamid",
-                help = "exemple d'ID Steam : 11000010c8aa16e",
+                name = "ID",
+                name1 = "quantité",
+                help = "ID du joueur",
+                help1 = "quantité de personnages à ajouter, non incrémental",
             },
-            charCreateRemove = {
-                custom = "\n**ID du joueur** `%d`\n **Action :** `used charcreateremove`",
-                title = "📋`Commande /removechar` ",
-                label = "Commande VORPcore pour autoriser les joueurs à créer plus d'un personnage : " ..
-                    Config.MaxCharacters,
-                name = "steamid",
-                help = "exemple d'ID Steam : 11000010c8aa16e",
-            },
+
             myJob = {
                 title = "📋`Commande /myjob` ",
                 label = "Commande VORPcore pour vérifier votre emploi",
@@ -1645,10 +1617,15 @@ Translation = {
             whitelistid1 = "📋` Nouveau joueur a rejoint le serveur` ",
         },
         MessageOfSystem = {
-            IsConnected        = "🚫 Compte dupliqué connecté (Steam | Rockstar | EpicGames)",
-            NoSteam            = "🚫 Vous devez avoir Steam ouvert, veuillez ouvrir Steam et redémarrer RedM",
+            IsConnected        = "❌ Accès Refusé: Compte Dupliqué Détecté (Steam | Rockstar)",
+            TwoAccounts        = "❌ Accès Refusé: Tentative de Connexion avec un Autre Compte.",
+            TwoAccounts2       = "❌ Accès Refusé: ID Steam Déjà Enregistré sur le Serveur.",
+            AccountEarlyLoad   = "❌ Accès Refusé: Chargement du Compte en Cours.",
+            AccountEarlyLoad2  = "❌ Accès Refusé: Chargement Double du Compte Non Autorisé.",
+            NoSteam            = "❌ Steam Requis: Veuillez Ouvrir Steam et Redémarrer RedM.",
+            NoDiscord          = "❌ Discord Requis: Veuillez Ouvrir Discord et Redémarrer RedM.",
             NoInWhitelist      =
-            "🚫 Vous n'êtes pas sur la liste blanche. Envoyez votre ID utilisateur dans le canal Discord #user-id: ",
+            "❌ Accès Refusé: Utilisateur Non sur la Liste Blanche. Veuillez Envoyer Votre ID d'Utilisateur sur Discord: ",
             NoPermissions      = "Vous n'avez pas suffisamment de permissions",
             CheckingIdentifier = "Vérification des identifiants",
             LoadingUser        = "Chargement de l'utilisateur",
@@ -1662,10 +1639,10 @@ Translation = {
             YouAreCarried      = "Vous êtes porté par une personne",
             promptLabel        = "Réapparaître",
             prompt             = "Réapparaître",
-            wayPoint           = "VORP : Vous devez d'abord définir un point de repère !",
-            mustBeSeated       = "VORP : Vous devez être assis sur le siège conducteur !",
-            wagonInFront       = "VORP : Vous devez être assis ou près d'un wagon pour le supprimer !",
-            cantCarry          = "VORP : Vous ne pouvez pas transporter plus d'armes !",
+            wayPoint           = "~e~Vous devez d'abord définir un point de repère !",
+            mustBeSeated       = "~e~Vous devez être assis sur le siège conducteur !",
+            wagonInFront       = "~e~Vous devez être assis ou près d'un wagon pour le supprimer !",
+            cantCarry          = "~e~Vous ne pouvez pas transporter plus d'armes !",
             Hold               = "ATTENDEZ !!",
             Load               = "Vous vous réveillez",
             Almost             = "Presque là...",
@@ -1691,6 +1668,7 @@ Translation = {
             message5           = "vous avez été blessé, selon les règles, vous devez oublier les 30 dernières minutes",
             message6           = "Réapparition !!!",
             permanentlyBan     = "Vous êtes banni de manière permanente!",
+            PlayerWhenFocus    = "Joueur",
         },
         SuggestChat     = {
             hideUi =
@@ -1702,6 +1680,7 @@ Translation = {
     },
     German       = {
         Notify          = {
+            testText = "Dies ist eine Testnachricht",
             userNonExistent = "ID ist falsch oder Benutzer existiert nicht.",
             ReadSuggestion = "Bitte lesen Sie die Chat-Vorschläge zur Verwendung des Befehls.",
             SetGroup = "Sie haben dem ID-User die Gruppe zugewiesen: %d",
@@ -1780,14 +1759,8 @@ Translation = {
                 label = "VORPcore-Befehl zum Geben von Waffen",
                 help = 'Spieler-ID',
                 help1 = 'WaffenHash',
-                help2 = 'Waffen-Seriennummer (optional)',
-                help3 = 'Benutzerdefinierter Waffenname (optional)',
-                help4 = 'Benutzerdefinierte Waffenbeschreibung (optional)',
                 name = "Id",
                 name1 = "WaffenHash",
-                name2 = "Seriennummer",
-                name3 = "Name",
-                name4 = "Beschreibung",
             },
             delMoney = {
                 custom = "\n**PlayerID** `%d` \n**Typ** `%d`\n**Menge** `%d`",
@@ -1905,18 +1878,13 @@ Translation = {
                 title = "📋` /addchar Befehl` ",
                 label = "VORPcore-Befehl, um festzulegen, ob ein Spieler mehr als einen Charakter erstellen darf: " ..
                     Config.MaxCharacters,
-                name = "steamid",
-                help = "Steam-ID Beispiel 11000010c8aa16e",
+                name = "ID",
+                name1 = "Menge",
+                help = "Spieler-ID",
+                help1 = "Anzahl der hinzuzufügenden Charaktere, nicht inkrementell",
 
             },
-            charCreateRemove = {
-                custom = "\n**PlayerID** `%d`\n **Aktion:** `charcreateremove verwendet`",
-                title = "📋` /removechar Befehl` ",
-                label = "VORPcore-Befehl, um festzulegen, ob ein Spieler mehr als einen Charakter erstellen darf: " ..
-                    Config.MaxCharacters,
-                name = "steamid",
-                help = "Steam-ID Beispiel 11000010c8aa16e",
-            },
+
             myJob = {
                 title = "📋` /myjob Befehl` ",
                 label = "VORPcore-Befehl, um deinen Job zu überprüfen",
@@ -1932,9 +1900,15 @@ Translation = {
             whitelistid1 = "📋` Neuer Spieler ist dem Server beigetreten` ",
         },
         MessageOfSystem = {
-            IsConnected        = "🚫 Doppeltes Konto verbunden (Steam | Rockstar | EpicGames)",
-            NoSteam            = "🚫 Du musst Steam geöffnet haben, bitte öffne Steam und starte RedM neu",
-            NoInWhitelist      = "🚫 Du bist nicht in der Whitelist. Sende in den Discord-Kanal #user-id deine Benutzer-ID:",
+            IsConnected        = "❌ Zugriff Verweigert: Doppeltes Konto Erkannt (Steam | Rockstar)",
+            TwoAccounts        = "❌ Zugriff Verweigert: Anmeldeversuch mit Einem Anderen Konto.",
+            TwoAccounts2       = "❌ Zugriff Verweigert: Steam-ID Bereits auf dem Server Registriert.",
+            AccountEarlyLoad   = "❌ Zugriff Verweigert: Konto wird Geladen.",
+            AccountEarlyLoad2  = "❌ Zugriff Verweigert: Doppeltes Laden des Kontos Nicht Gestattet.",
+            NoSteam            = "❌ Steam Erforderlich: Bitte Öffnen Sie Steam und Starten Sie RedM Neu.",
+            NoDiscord          = "❌ Discord Erforderlich: Bitte Öffnen Sie Discord und Starten Sie RedM Neu.",
+            NoInWhitelist      =
+            "❌ Zugriff Verweigert: Benutzer Nicht auf der Whitelist. Bitte Senden Sie Ihre Benutzer-ID in Discord: ",
             NoPermissions      = "Du hast nicht genügend Berechtigungen",
             CheckingIdentifier = "Überprüfe Identifikatoren",
             LoadingUser        = "Benutzer wird geladen",
@@ -1951,11 +1925,10 @@ Translation = {
             VoiceRangeChanged  = "Die Reichweite des Voice-Chats wurde auf %s Meter geändert",
             promptLabel        = "Wiederbeleben",
             prompt             = "Wiederbeleben",
-            wayPoint           = "VORP: Du musst zuerst einen Wegpunkt setzen!",
-            mustBeSeated       = "VORP: Du musst auf dem Fahrersitz sitzen!",
-            wagonInFront       =
-            "VORP: Du musst im Wagen sitzen oder dich in der Nähe eines Wagens befinden, um ihn zu löschen!",
-            cantCarry          = "VORP: Kann keine weiteren Waffen tragen!",
+            wayPoint           = "~e~Du musst zuerst einen Wegpunkt setzen!",
+            mustBeSeated       = "~e~Du musst auf dem Fahrersitz sitzen!",
+            wagonInFront       = "~e~Du musst im Wagen sitzen oder dich in der Nähe eines Wagens befinden, um ihn zu löschen!",
+            cantCarry          = "~e~Kann keine weiteren Waffen tragen!",
             Hold               = "HALTEN!!",
             Load               = "Du wachst auf",
             Almost             = "Fast da...",
@@ -1983,7 +1956,7 @@ Translation = {
             message5           = "du wurdest verletzt, gemäß den Regeln musst du die letzten 30 Minuten vergessen",
             message6           = "Wiederbeleben!!!",
             permanentlyBan     = "Du bist permanent gebannt!",
-
+            PlayerWhenFocus    = "Spieler",
         },
         SuggestChat     = {
             hideUi =

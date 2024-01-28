@@ -64,6 +64,7 @@ Commands = {
             { name = T.addJob.name,  help = T.addJob.help },
             { name = T.addJob.name1, help = T.addJob.help1 },
             { name = T.addJob.name2, help = T.addJob.help2 },
+            { name = T.addJob.name3, help = T.addJob.help3 },
         },
         userCheck = true,
         groupAllowed = { "admin" },
@@ -101,9 +102,6 @@ Commands = {
         suggestion = {
             { name = T.addWeapon.name,  help = T.addWeapon.help },
             { name = T.addWeapon.name1, help = T.addWeapon.help1 },
-            { name = T.addWeapon.name2, help = T.addWeapon.help2 },
-            { name = T.addWeapon.name3, help = T.addWeapon.help3 },
-            { name = T.addWeapon.name4, help = T.addWeapon.help4 },
         },
         userCheck = true,
         groupAllowed = { "admin" },
@@ -356,30 +354,14 @@ Commands = {
         commandName = "addChar",
         label = T.charCreateAdd.label,
         suggestion = {
-            { name = T.charCreateAdd.name, help = T.charCreateAdd.help },
+            { name = T.charCreateAdd.name,  help = T.charCreateAdd.help },
+            { name = T.charCreateAdd.name1, help = T.charCreateAdd.help1 },
         },
-        userCheck = false,
+        userCheck = true,
         groupAllowed = { "admin" },
         aceAllowed = 'vorpcore.addchar.Command',
         callFunction = function(...)
             AddCharCanCreateMore(...)
-        end
-    },
-    charCreateRemove = {
-        webhook = "",
-        custom = T.charCreateRemove.custom,
-        title = T.charCreateRemove.title,
-        --end webhook
-        commandName = "removeChar",
-        label = T.charCreateRemove.label,
-        suggestion = {
-            { name = T.charCreateRemove.name, help = T.charCreateRemove.help },
-        },
-        userCheck = false,
-        groupAllowed = { "admin" },
-        aceAllowed = 'vorpcore.removechar.Command',
-        callFunction = function(...)
-            RemoveCharCanCreateMore(...)
         end
     },
     myJob = {

@@ -1,26 +1,28 @@
 local T = Translation[Lang].MessageOfSystem
 local S = Translation[Lang].SuggestChat
 
-
-PlayersCommands = {
+PlayerCommands = {
     hideui = {
         command = Config.CommandHideIU,
         suggestion = S.hideUi,
-        run = ToggleAllUI,
+        run = function()
+            CoreAction.Utils.ToggleAllUI()
+        end,
         restricted = false
     },
     toggleui = {
         command = Config.CommandToogleUI,
         suggestion = S.toogleUi,
-        run = ToggleVorpUI,
+        run = function()
+            CoreAction.Utils.ToggleVorpUI()
+        end,
         restricted = false
     },
     clear = {
         command = Config.CommandClearAnim,
         suggestion = S.stopAnim,
         run = function()
-            local player = PlayerPedId()
-            ClearPedTasksImmediately(player)
+            ClearPedTasksImmediately(PlayerPedId())
         end,
         restricted = false
     },
@@ -28,7 +30,7 @@ PlayersCommands = {
         command = Config.CommandOnOffPVP,
         suggestion = S.tooglePVP,
         run = function()
-            local pvp = TogglePVP()
+            local pvp = CoreAction.Utils.TogglePVP()
 
             if pvp then
                 VorpNotification:NotifyRightTip(T.PVPNotifyOn, 4000)
@@ -41,7 +43,7 @@ PlayersCommands = {
 }
 
 CreateThread(function()
-    for _, value in pairs(PlayersCommands) do
+    for _, value in pairs(PlayerCommands) do
         if not value.restricted then
             RegisterCommand(value.command, function()
                 value.run()
