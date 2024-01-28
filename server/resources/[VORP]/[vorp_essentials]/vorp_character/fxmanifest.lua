@@ -9,10 +9,15 @@ lua54 'yes'
 
 shared_scripts {
 	'config.lua',
-	'shared/*.lua'
+	'config_shops.lua',
+	'shared/utils.lua'
 }
 
 client_scripts {
+	'@vorp_core/client/dataview.lua',
+	'shared/translation.lua',
+	'shared/clothing.lua',
+	'shared/hairs.lua',
 	'client/*.lua',
 	'client/notify.js'
 }
@@ -24,12 +29,13 @@ server_scripts {
 files {
 	--'ui/*',
 	'images/*png',
+	'images/CreatorImages/*png',
 	'clothingfemale/*png',
 }
 
 --========= VERSION =============--
 
-version '1.4'
+version '1.5'
 vorp_checker 'yes'
 vorp_name '^4Resource version Check^3'
 vorp_github 'https://github.com/VORPCORE/vorp_character-lua'
